@@ -1,4 +1,6 @@
  import 'package:flutter/material.dart'; 
+ import 'package:cycle_sharing_app/models/rentee_screen.dart';
+ import 'package:cycle_sharing_app/models/renter_screen.dart';
 
 class RenterLoginScreen extends StatefulWidget {
   @override
@@ -130,6 +132,15 @@ class _RenterLoginScreenState extends State<RenterLoginScreen> {
                   ),
                 ),
                 SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RenterScreen()),
+                    );
+                  },
+                  child: Text('Switch to Renter'), // Added missing child parameter
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -281,6 +292,15 @@ class _RenteeLoginScreenState extends State<RenteeLoginScreen> {
                   ),
                 ),
                 SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RenteeScreen()),
+                    );
+                  },
+                  child: Text('Switch to Rentee'), // Added missing child parameter
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
